@@ -24,7 +24,7 @@ jobs:
       run: |
         npm run build
     - name: Deploy to S3
-      uses: SawLinThant/PatientPortal-ReactJS@main
+      uses: jakejarvis/s3-sync-action@main
       with:
         args: --acl public-read --delete
       env:
